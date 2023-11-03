@@ -1,0 +1,244 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  color: inherit;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+}
+
+.navbar1 {
+  display: flex;
+  background-color: #abd373;
+  justify-content: space-between;
+  padding: 20px 260px;
+  color: white;
+}
+.navbar1 .top-span {
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+  font-size: 14px;
+}
+.navbar1 .top-selectors {
+  color: #abd373;
+}
+.navbar1 .top-selectors option {
+  color: #abd373;
+}
+
+@media screen and (max-width: 992px) {
+  .navbar1 {
+    display: none;
+  }
+}
+.navbar2 {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 260px;
+  color: black;
+}
+.navbar2 .num {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navbar2 .num i {
+  background-color: #abd373;
+  border-radius: 10px;
+  color: #ffffff;
+  width: 44px;
+  height: 42px;
+  line-height: 42px;
+  text-align: center;
+  display: block;
+  margin-right: 15px;
+  font-size: 25px;
+}
+.navbar2 .num a {
+  font-size: 18px;
+}
+.navbar2 .num a:hover {
+  color: #abd373;
+}
+.navbar2 .info-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  font-size: 20px;
+  font-weight: 100;
+}
+.navbar2 .info-icon .fa-bars {
+  display: none;
+}
+
+@media screen and (max-width: 992px) {
+  .navbar2 {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 260px;
+    color: black;
+  }
+  .navbar2 .num {
+    display: none;
+  }
+  .navbar2 .info-icon .fa-user-group {
+    display: none;
+  }
+  .navbar2 .info-icon .fa-heart {
+    display: none;
+  }
+  .navbar2 .info-icon .fa-bars {
+    display: block;
+  }
+}
+.navigation {
+  border-top: 1px solid rgb(219, 216, 216);
+}
+.navigation ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.navigation ul li {
+  color: #4c4c4c;
+  line-height: 50px;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 992px) {
+  .navigation {
+    display: none;
+  }
+}
+#slider-section {
+  background-image: url("https://htmldemo.net/pronia/pronia/assets/images/slider/bg/1-1.jpg");
+  background-size: cover;
+  height: 100vh;
+}
+#slider-section .container {
+  padding-top: 60px;
+}
+#slider-section .container .row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+#slider-section .container .row .content .off {
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 47px;
+  line-height: 65px;
+  display: block;
+}
+#slider-section .container .row .content .title {
+  font-size: 70px;
+  line-height: 1.4;
+}
+#slider-section .container .row .content .description {
+  font-size: 18px;
+  line-height: 28px;
+  margin-bottom: 50px;
+}
+#slider-section .container .row .content .btn {
+  cursor: pointer;
+  width: 210px;
+  height: 65px;
+  line-height: 65px;
+  font-size: 16px;
+  background-color: #abd373;
+  border-color: #abd373;
+  color: #ffffff;
+  border-radius: 32px;
+  text-transform: uppercase;
+  text-align: center;
+  transition: all 300ms;
+}
+#slider-section .container .row .content .btn:hover {
+  transition: all 300ms;
+  background-color: #525252;
+}
+
+@media screen and (max-width: 992px) {
+  #slider-section {
+    height: 136vh;
+  }
+  #slider-section .container .row {
+    display: flex;
+    flex-direction: column;
+  }
+  #slider-section .container .row .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #slider-section .container .row .content .off {
+    font-size: 27px;
+    line-height: 45px;
+  }
+  #slider-section .container .row .content .title {
+    font-size: 40px;
+    line-height: 1.4;
+  }
+  #slider-section .container .row .content .description {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+  #slider-section .container .row .content .btn {
+    width: 180px;
+    height: 45px;
+    padding-bottom: 15px;
+  }
+  #slider-section .container .row img {
+    max-width: 65%;
+  }
+}
+@media screen and (max-width: 522px) {
+  #slider-section {
+    height: 110vh;
+  }
+}
+.modal {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(82, 82, 82, 0.4);
+}/*# sourceMappingURL=main.css.map */
