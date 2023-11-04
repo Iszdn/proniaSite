@@ -47,7 +47,7 @@
         }
        
       }
-    }
+   }
   }
 }
 @media screen and (max-width: 992px) {
@@ -56,7 +56,7 @@
     .container {
       .row {
         display: flex;
-        flex-direction: column;
+        flex-direction: column-reverse;
         .content {
           display: flex;
           flex-direction: column;
