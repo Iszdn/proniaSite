@@ -127,6 +127,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 20px;
   }
   .navbarForMedia ul {
     display: flex;
@@ -153,13 +154,14 @@ body {
   position: absolute;
   display: none;
   padding: 20px;
+  z-index: 2;
 }
 .navigation .mainUl .mainLI .dorpdown li {
   line-height: 30px;
   text-transform: none;
 }
 .navigation .mainUl .mainLI .dorpdown li a {
-  transition: all 0.8s;
+  transition: all 0.2s;
 }
 .navigation .mainUl .mainLI .dorpdownS {
   position: absolute;
@@ -214,6 +216,95 @@ body {
     display: none;
   }
 }
+.sideMenu {
+  display: none;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease 0s;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 99;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.sideMenu .blackBack {
+  width: 450px;
+  background-color: #333333;
+}
+.sideMenu .blackBack .columnBar {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-transform: uppercase;
+  padding: 80px 50px;
+  color: white;
+}
+.sideMenu .blackBack .columnBar .side-Menu-Close {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 25px 30px;
+  height: auto;
+  cursor: pointer;
+}
+.sideMenu .blackBack .columnBar .numSide {
+  display: flex;
+  align-items: center;
+}
+.sideMenu .blackBack .columnBar .numSide i {
+  background-color: #abd373;
+  border-radius: 10px;
+  color: #ffffff;
+  width: 44px;
+  height: 42px;
+  line-height: 42px;
+  text-align: center;
+  display: block;
+  margin-right: 15px;
+  font-size: 25px;
+}
+.sideMenu .blackBack .columnBar .numSide a {
+  font-size: 20px;
+}
+.sideMenu .blackBack .columnBar .infoSide {
+  display: flex;
+  gap: 20px;
+}
+.sideMenu .blackBack .columnBar .infoSide .eng {
+  cursor: pointer;
+}
+.sideMenu .blackBack .columnBar .infoSide .eng .engSub {
+  display: none;
+  position: absolute;
+  padding: 10px;
+  line-height: 1.5;
+  border-radius: 7px;
+  text-transform: none;
+  color: black;
+  background-color: #ffffff;
+}
+.sideMenu .blackBack .columnBar .infoSide .eng .engSubVid {
+  display: block;
+}
+.sideMenu .blackBack .columnBar .homePageBlog {
+  line-height: 4.5;
+}
+.sideMenu .blackBack .columnBar .homePageBlog .submenuMedia {
+  background-color: rgba(255, 255, 255, 0.05);
+  overflow-y: auto;
+  padding: 25px 0;
+  margin: 20px 0 10px;
+  display: none;
+}
+.sideMenu .blackBack .columnBar .homePageBlog .bodyCont {
+  display: block;
+}
+
+.sideMenuOpen {
+  display: block;
+}
+
 #slider-section {
   background-image: url("https://htmldemo.net/pronia/pronia/assets/images/slider/bg/1-1.jpg");
   background-size: cover;
@@ -257,6 +348,7 @@ body {
   text-transform: uppercase;
   text-align: center;
   transition: all 300ms;
+  margin-bottom: 30px;
 }
 #slider-section .container .row .content .btn:hover {
   transition: all 300ms;
@@ -298,11 +390,128 @@ body {
     max-width: 65%;
   }
 }
-@media screen and (max-width: 522px) {
+@media screen and (max-width: 992px) {
   #slider-section {
-    height: 110vh;
+    height: 100%;
   }
 }
+#payment {
+  height: 30vh;
+}
+#payment .containerPay {
+  padding-top: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+#payment .containerPay .cardPay {
+  align-items: center;
+  display: flex;
+  border: 1px dashed #abd373;
+  border-radius: 5px;
+  padding: 25px 30px;
+  gap: 20px;
+}
+#payment .containerPay .cardPay .content-cardPay {
+  width: calc(100% - 60px);
+  padding-left: 20px;
+  line-height: 20px;
+}
+#payment .containerPay .cardPay .content-cardPay h2 {
+  color: #1f2226;
+  font-size: 20px;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+#payment .containerPay .cardPay .content-cardPay p {
+  color: #3e3e3f;
+}
+
+@media screen and (max-width: 992px) {
+  #payment {
+    height: 100%;
+  }
+  #payment .containerPay {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 600px) {
+  #payment {
+    height: 100%;
+  }
+  #payment .containerPay {
+    display: flex;
+    flex-direction: column;
+  }
+}
+#ourProducts .containerProduct .titleProduct {
+  text-transform: uppercase;
+  position: relative;
+  color: #393939;
+  font-size: 36px;
+  line-height: 27px;
+  padding-left: 90px;
+  padding-right: 90px;
+  font-weight: 700;
+  text-align: center;
+  padding-top: 3%;
+}
+#ourProducts .containerProduct .rowProduct {
+  margin-top: 60px;
+}
+#ourProducts .containerProduct .rowProduct .seller {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+#ourProducts .containerProduct .rowProduct .seller li {
+  font-size: 18px;
+  color: #393939;
+  padding: 10px 25px 10px 25px;
+  border: 1px solid #a7ad9e;
+}
+#ourProducts .containerProduct .rowProduct .seller li:hover {
+  color: #abd373;
+  border: 1px dashed #abd373;
+}
+#ourProducts .containerProduct .myTabContent .productItemRow {
+  display: flex;
+  gap: 30px;
+  margin: 0px 90px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+#ourProducts .containerProduct .myTabContent .productItemRow .col-flowers {
+  padding: 10px;
+  line-height: 1.8;
+}
+#ourProducts .containerProduct .myTabContent .productItemRow .col-flowers h2 {
+  font-size: 18px;
+}
+#ourProducts .containerProduct .myTabContent .productItemRow .col-flowers .price-basket {
+  font-size: 20px;
+}
+#ourProducts .containerProduct .myTabContent .productItemRow .col-flowers .price-basket span {
+  margin-right: 10px;
+  color: #abd373;
+}
+#ourProducts .containerProduct .myTabContent .productItemRow .col-flowers .price-basket .fa-basket-shopping {
+  cursor: pointer;
+  color: #abd373;
+}
+#ourProducts .containerProduct .myTabContent .productItemRow .col-flowers ul {
+  display: flex;
+  color: #ffe24d;
+  cursor: pointer;
+}
+
 #modal {
   display: none;
   color: white;

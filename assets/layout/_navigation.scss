@@ -25,7 +25,8 @@
     display: none;
   }
 }
-
+// navbar 1 end
+// navbar 2 start
 .navbar2 {
   display: flex;
   justify-content: space-between;
@@ -74,6 +75,8 @@
     display: none;
   }
 }
+// navbar 2 end
+//navbarForMedia start
 .navbarForMedia{
   display: none;
   .info-iconMedia {
@@ -91,12 +94,16 @@
     display: flex;
 justify-content: space-between;
 align-items: center;
+margin: 20px;
 ul{
   display: flex;
   gap: 10px;
 }
   }
 }
+//navbarForMedia start
+
+//navigation start
 .navigation {
   border-top: 1px solid rgb(219, 216, 216);
 
@@ -117,13 +124,14 @@ ul{
         position: absolute;
         display: none;
         padding: 20px;
+        z-index: 2;
 
         li {
           line-height: 30px;
           text-transform: none;
 
           a {
-            transition: all 0.8s;
+            transition: all 0.2s;
           }
         }
       }
@@ -195,3 +203,100 @@ ul{
     display: none;
   }
 }
+//navigation end
+
+
+// MediaMenu start 
+.sideMenu{
+display: none;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease 0s;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 99;
+  overflow-y: auto;
+  overflow-x: hidden;
+  .blackBack{
+  width: 450px;
+  background-color: #333333;
+  .columnBar{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+text-transform: uppercase;
+padding: 80px 50px;
+color: white;
+.side-Menu-Close{
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 25px 30px;
+  height: auto;
+  cursor: pointer;
+}
+.numSide{
+    display: flex;
+    align-items: center;
+    i {
+      background-color: #abd373;
+      border-radius: 10px;
+      color: #ffffff;
+      width: 44px;
+      height: 42px;
+      line-height: 42px;
+      text-align: center;
+      display: block;
+      margin-right: 15px;
+      font-size: 25px;
+    }
+a{
+  font-size: 20px;
+}
+}
+
+.infoSide{
+  display: flex;
+  gap: 20px;
+  .eng{
+    cursor: pointer;
+    .engSub{
+      display: none;
+      position: absolute;
+      padding: 10px;
+      line-height: 1.5;
+      border-radius: 7px;
+      text-transform: none;
+    color: black;
+    background-color: #ffffff;
+  }
+  .engSubVid{
+    display: block;
+  }
+}
+  
+}
+.homePageBlog{
+  line-height: 4.5;
+.submenuMedia{
+  background-color: rgba(255, 255, 255, 0.05);
+  overflow-y: auto;
+  padding: 25px 0;
+  margin: 20px 0 10px;
+  display: none;
+}
+.bodyCont{
+  display: block;
+}
+}
+  }}
+}
+.sideMenuOpen{
+  display: block;
+}
+// @media screen and (max-width: 992px){
+//   #sideMenu{
+//     display: block;
+//   }
+// }

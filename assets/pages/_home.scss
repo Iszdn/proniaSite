@@ -40,6 +40,7 @@
           text-transform: uppercase;
           text-align: center;
           transition: all 300ms;
+          margin-bottom: 30px;
            
         }.btn:hover{
           transition: all 300ms;
@@ -87,10 +88,135 @@
     }
   }
 }
-@media screen and (max-width: 522px) {
+@media screen and (max-width: 992px) {
     #slider-section {
-      height: 110vh;
+      height: 100%;
         }
       }
+ 
+      // payment section with cards start 
+#payment{
+  height: 30vh;
+  .containerPay{
+    padding-top: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  .cardPay{
+    align-items: center;
+    display: flex;
+    border: 1px dashed #abd373;
+    border-radius: 5px;
+    padding: 25px 30px;
+    gap: 20px;
+    .content-cardPay{
+      width: calc(100% - 60px);
+    padding-left: 20px;
+    line-height: 20px;
+    h2{
+      color: #1f2226;
+      font-size: 20px;
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+      line-height: 1.2;
+  }
+  p{
+    color: #3e3e3f;
+  }
+    }
+    }
+  }}
+  @media  screen and (max-width: 992px) {
+    #payment{
+      height: 100%;
+      .containerPay{
+      display: flex;
+      flex-wrap: wrap;
+      }}
+  }
+
+  @media  screen and (max-width: 600px) {
+    #payment{
+      height: 100%;
+      .containerPay{
+      display: flex;
+      flex-direction: column;
+      }}
+  }
+
+
+  // our products section start 
+  #ourProducts{
+    .containerProduct{
+      .titleProduct{
+        text-transform: uppercase;
+        position: relative;
+        color: #393939;
+        font-size: 36px;
+        line-height: 27px;
+        padding-left: 90px;
+        padding-right: 90px;
+        font-weight: 700;
+        text-align: center;  
+        padding-top: 3%;   
+      }
+      .rowProduct{
+        margin-top: 60px;
+        .seller{ 
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 30px;
+          flex-wrap: wrap;
+          li{
+            font-size: 18px;
+    color: #393939;
+    padding: 10px 25px 10px 25px;
+            border: 1px solid #a7ad9e;
+          }
+         li:hover{
+          color: #abd373;
+          border: 1px dashed #abd373;
+         }
     
+        }
+
+      }  
+      .myTabContent{
+        .productItemRow{
+          display: flex;
+          gap: 30px;
+          margin: 0px 90px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+   .col-flowers{
+    padding: 10px;
+    line-height: 1.8;
+    h2{
+      font-size: 18px;
+    }
+    .price-basket{
+      font-size: 20px;
+      span{
+        margin-right: 10px;
+        color: #abd373;
+      }
+      .fa-basket-shopping{
+        cursor: pointer;
+        color: #abd373;
+      }
+    }
+    ul{
+      display: flex;
+      color: #ffe24d;
+      cursor: pointer;
+    }
+   }
+        }
+      }
+    }
+  }
   

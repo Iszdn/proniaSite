@@ -18,7 +18,6 @@ closeIconForClose.addEventListener('click',(e)=>{
    modal.classList.remove("modalVid")
 })
 searchLoopMedia.addEventListener("click", (e)=>{
-    console.log("kliklendim");
     e.preventDefault()
   modal.classList.add("modalVid")
 });
@@ -35,3 +34,5 @@ body.addEventListener('mousemove',(e)=>{
     let y=Math.floor(e.clientY/100)
     ImgSlider.style.transform=`translate(${-x}px,${-y}px)`
 })
+
+
