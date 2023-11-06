@@ -31,6 +31,13 @@
                 </div>
             </div>
         </div>
+        <div class="addedBuscet">
+            <div class="addedCard">
+            <img src="" alt="">
+            <h2 class="titleBus"></h2>
+            <span>x</span>
+        </div>
+        </div>
                 </section>
 <script>
     const productItemRow=document.querySelector('.productItemRow')
@@ -98,6 +105,10 @@ addedBasket.href = "index.html";
       })
       setLocalStorage("Basket",busketArr)
       console.log(busketArr);
+      busketArr.forEach(x=>{
+         const card = creatBuscetCard(x.id)
+      })
+      
   }
   }
   busketArr.forEach(element =>

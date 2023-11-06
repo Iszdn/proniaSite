@@ -286,7 +286,13 @@ a{
   margin: 20px 0 10px;
   display: none;
 }
+.submenuMediaIc{
+  display: none;
+}
 .bodyCont{
+  display: block;
+}
+.bodyContIc{
   display: block;
 }
 }
@@ -295,8 +301,50 @@ a{
 .sideMenuOpen{
   display: block;
 }
-// @media screen and (max-width: 992px){
-//   #sideMenu{
-//     display: block;
-//   }
-// }
+
+// buscet start 
+.sideBuscet{
+  display: none;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease 0s;
+  width: 100%;
+  height: 100%;
+  right: 0;
+  top: 0;
+  z-index: 99;
+  overflow-y: auto;
+  overflow-x: hidden;
+  .whiteBack{
+    position: fixed;
+    right: 0px;
+    top: 0px;
+    width: 450px;
+    background-color: white;
+    height: 100vh;
+    .addedCard{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 40px;
+      .titlePrice{
+        line-height: 1.5;
+      }
+    }
+    .closeBuscet{
+display: flex;
+justify-content: space-between;
+padding: 40px;
+font-size: 24px;
+h4{
+  font-weight: 500;
+  color: #525252;
+  line-height: 1.2;
+}
+    }
+
+  }
+}
+.openBus{
+  display: block;
+}

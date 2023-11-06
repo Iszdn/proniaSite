@@ -1,5 +1,22 @@
+const sideBuscet=document.querySelector(".sideBuscet")
+const addedBuscet = document.querySelector(".addedBuscet")
+const openBuscet=document.getElementById("openBuscet")
+const BuscetClose=document.querySelector(".side-Buscet-Close")
+openBuscet.addEventListener('click',(e)=>{
+  e.preventDefault()
+  sideBuscet.classList.add("openBus")
+})
+BuscetClose.addEventListener('click',(e)=>{
+  e.preventDefault()
+  sideBuscet.classList.remove("openBus")
+})
 const productItemRow = document.querySelector(".productItemRow");
-const busketArr = [];
+
+let busketArr = [];
+if (getLocalStorage('Basket')) {
+  busketArr = getLocalStorage('Basket')
+  
+}
 
 function setLocalStorage(key, data) {
   localStorage.setItem(key, JSON.stringify(data));
@@ -69,7 +86,12 @@ function creatCard(id, img_url, flowerTittle, flowerPrice) {
     });
     setLocalStorage("Basket", busketArr);
     console.log(busketArr);
+    busketArr.forEach(x=>{
+      console.log(x);
+      creatBuscetCard(x.id,x.img_url,x.flowerTittle,x.flowerPrice)
+    })
   };
+
 }
 
 function getFlowers() {
@@ -84,3 +106,29 @@ function getFlowers() {
     .catch((err) => console.log(err));
 }
 getFlowers();
+
+function creatBuscetCard(id, img_url, flowerTittle, flowerPrice) {
+  const addedCard = document.createElement("div")
+  const img = document.createElement("img")
+  img.setAttribute("src", img_url)
+  const titlePrice = document.createElement("div")
+  const titleBus = document.createElement("h2")
+  const priceBus = document.createElement("span")
+  const delProduct = document.createElement("span")
+
+  addedCard.classList.add("addedCard")
+  titlePrice.classList.add("titlePrice")
+  titleBus.classList.add("titleBus")
+  priceBus.classList.add("priceBus")
+  delProduct.classList.add("delProduct")
+
+  titlePrice.append(titleBus,priceBus)
+  addedCard.append(img,titlePrice,delProduct)
+  addedBuscet.append(addedCard)
+
+  titleBus.textContent=flowerTittle
+  priceBus.textContent="$"+ flowerPrice
+  delProduct.textContent="x"
+
+
+}
