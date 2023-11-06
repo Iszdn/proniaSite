@@ -492,21 +492,21 @@ body {
   padding: 10px;
   line-height: 1.8;
 }
-#ourProducts .containerProduct .myTabContent .productItemRow .col-flowers h2 {
+#ourProducts .containerProduct .myTabContent .productItemRow .col-flowers .h2Title {
   font-size: 18px;
 }
 #ourProducts .containerProduct .myTabContent .productItemRow .col-flowers .price-basket {
   font-size: 20px;
 }
-#ourProducts .containerProduct .myTabContent .productItemRow .col-flowers .price-basket span {
+#ourProducts .containerProduct .myTabContent .productItemRow .col-flowers .price-basket .priceFlo {
   margin-right: 10px;
   color: #abd373;
 }
-#ourProducts .containerProduct .myTabContent .productItemRow .col-flowers .price-basket .fa-basket-shopping {
+#ourProducts .containerProduct .myTabContent .productItemRow .col-flowers .price-basket .addBasket {
   cursor: pointer;
-  color: #abd373;
+  color: #3b5d0d;
 }
-#ourProducts .containerProduct .myTabContent .productItemRow .col-flowers ul {
+#ourProducts .containerProduct .myTabContent .productItemRow .col-flowers .starUl {
   display: flex;
   color: #ffe24d;
   cursor: pointer;

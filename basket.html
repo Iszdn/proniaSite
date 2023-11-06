@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <title>Basket Page</title>
+</head>
+<body>
+    <section id="ourProducts">
+        <div class="containerProduct">
+            <div class="titleProduct">
+                <h2>Your Products</h2>
+            </div>
+            <div class="rowProduct">
+                
+                <div class="myTabContent">
+                    <div class="productItemRow">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+                </section>
+<script>
+    const productItemRow=document.querySelector('.productItemRow')
+let busketArr=[]
+busketArr=getLocalStorage("Basket")
+function setLocalStorage(key,data) {
+    localStorage.setItem(key, JSON.stringify(data))
+}
+function getLocalStorage(key) {
+   return JSON.parse(localStorage.getItem(key))
+}
+function creatCard(id,img_url,flowerTittle,flowerPrice) {
+  
+  const colFlowers=document.createElement('div')
+  const imgCard=document.createElement('div')
+  const img=document.createElement('img')
+  img.setAttribute("src",img_url)
+  const cardContent=document.createElement('div')
+  const h2Title=document.createElement('h2')
+  const priceBasket=document.createElement('div')
+  const priceFlo=document.createElement('span')
+  const addBasket=document.createElement('span')
+  const addedBasket=document.createElement('a')
+  const linkBusket=document.createTextNode("Home")
+  const starUL=document.createElement('span')
+  const iconElement = document.createElement("i");
+  const iconElement2 = document.createElement("i");
+  const iconElement3 = document.createElement("i");
+  const iconElement4 = document.createElement("i");
+  const iconElement5 = document.createElement("i");
+  
+  iconElement.className = "fa-solid fa-star";
+  iconElement2.className = "fa-solid fa-star";
+  iconElement3.className = "fa-solid fa-star";
+  iconElement4.className = "fa-solid fa-star";
+  iconElement5.className = "fa-solid fa-star";
+  colFlowers.classList.add("col-flowers")
+  imgCard.classList.add("img-card")
+  cardContent.classList.add("card-content")
+  h2Title.classList.add("h2Title")
+  priceBasket.classList.add("price-basket")
+  priceFlo.classList.add("priceFlo")
+  addBasket.classList.add("addBasket")
+  starUL.classList.add("starUl")
+  
+  addedBasket.append(linkBusket)
+  imgCard.append(img)
+  priceBasket.append(priceFlo,addBasket,addedBasket)
+  starUL.append(iconElement,iconElement2,iconElement3,iconElement4,iconElement5)
+  cardContent.append(h2Title,priceBasket,starUL)
+  colFlowers.append(imgCard,cardContent)
+  productItemRow.append(colFlowers)
+
+  addedBasket.title = "Home";
+addedBasket.href = "index.html";
+  h2Title.textContent=flowerTittle
+  priceFlo.textContent="$"+ flowerPrice
+  
+  addBasket.onclick=function (e) {
+      busketArr.push({
+          id,
+          img_url,
+          flowerTittle,
+          flowerPrice
+      })
+      setLocalStorage("Basket",busketArr)
+      console.log(busketArr);
+  }
+  }
+  busketArr.forEach(element =>
+    creatCard(element.id,element.img_url,element.flowerTittle,element.flowerPrice)
+  );
+</script>
+</body>
+</html>

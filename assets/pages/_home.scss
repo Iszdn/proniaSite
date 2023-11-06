@@ -195,21 +195,22 @@
    .col-flowers{
     padding: 10px;
     line-height: 1.8;
-    h2{
+    .h2Title{
       font-size: 18px;
     }
     .price-basket{
       font-size: 20px;
-      span{
+      .priceFlo{
         margin-right: 10px;
         color: #abd373;
       }
-      .fa-basket-shopping{
+      .addBasket{
         cursor: pointer;
-        color: #abd373;
+        color: #3b5d0d;
+
       }
     }
-    ul{
+    .starUl{
       display: flex;
       color: #ffe24d;
       cursor: pointer;
