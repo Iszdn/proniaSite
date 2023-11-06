@@ -46,18 +46,4 @@ const menuItem = document.querySelectorAll('.menu-item');
                 });
             });
         });
-        const menuItemIc = document.querySelectorAll('.menu-itemIc');
-        const submenuMediaIc = document.querySelectorAll('.submenuMediaIc');
-        menuItemIc.forEach(function(menuItemIc, index) {
-            menuItemIc.addEventListener('click', function(e) {
-                e.preventDefault()
-                const currentB = submenuMediaIc[index];
-                currentB.classList.toggle("bodyCont");
-
-                submenuMediaIc.forEach(function(otherBody, otherI) {
-                    if (otherI !== index) {
-                        otherBody.classList.remove("bodyContIc");
-                    }
-                });
-            });
-        });
+       

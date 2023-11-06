@@ -1,7 +1,14 @@
 const sideBuscet=document.querySelector(".sideBuscet")
 const addedBuscet = document.querySelector(".addedBuscet")
 const openBuscet=document.getElementById("openBuscet")
+const openBuscetMedia=document.getElementById("openBuscetMedia")
 const BuscetClose=document.querySelector(".side-Buscet-Close")
+
+// open click 
+openBuscetMedia.addEventListener('click',(e)=>{
+  e.preventDefault()
+  sideBuscet.classList.add("openBus")
+})
 openBuscet.addEventListener('click',(e)=>{
   e.preventDefault()
   sideBuscet.classList.add("openBus")
@@ -18,12 +25,15 @@ if (getLocalStorage('Basket')) {
   
 }
 
+// localStorage function 
 function setLocalStorage(key, data) {
   localStorage.setItem(key, JSON.stringify(data));
 }
 function getLocalStorage(key) {
   return JSON.parse(localStorage.getItem(key));
 }
+
+// creat card 
 function creatCard(id, img_url, flowerTittle, flowerPrice) {
   const colFlowers = document.createElement("div");
   const imgCard = document.createElement("div");
@@ -107,6 +117,7 @@ function getFlowers() {
 }
 getFlowers();
 
+// creat buscet cards 
 function creatBuscetCard(id, img_url, flowerTittle, flowerPrice) {
   const addedCard = document.createElement("div")
   const img = document.createElement("img")
@@ -130,5 +141,7 @@ function creatBuscetCard(id, img_url, flowerTittle, flowerPrice) {
   priceBus.textContent="$"+ flowerPrice
   delProduct.textContent="x"
 
-
+  delProduct.addEventListener('click',(e)=>{
+    delProduct.parentElement.remove()
+  })
 }

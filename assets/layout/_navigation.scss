@@ -313,15 +313,13 @@ a{
   right: 0;
   top: 0;
   z-index: 99;
-  overflow-y: auto;
+    overflow-y: auto;
   overflow-x: hidden;
   .whiteBack{
-    position: fixed;
-    right: 0px;
-    top: 0px;
+    float: right;
     width: 450px;
     background-color: white;
-    height: 100vh;
+ min-height: 100vh;
     .addedCard{
       display: flex;
       justify-content: space-between;
@@ -329,6 +327,9 @@ a{
       padding: 40px;
       .titlePrice{
         line-height: 1.5;
+      }
+      .delProduct{
+        cursor: pointer;
       }
     }
     .closeBuscet{
